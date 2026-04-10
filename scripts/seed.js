@@ -3,8 +3,11 @@
 const { MongoClient } = require("mongodb");
 const bcrypt = require("bcryptjs");
 
-const uri = "mongodb://Carlyle:carlyle@ac-h90ynve-shard-00-00.km13gko.mongodb.net:27017,ac-h90ynve-shard-00-01.km13gko.mongodb.net:27017,ac-h90ynve-shard-00-02.km13gko.mongodb.net:27017/tododb?ssl=true&replicaSet=atlas-3nsy57-shard-0&authSource=admin&appName=Cluster0";
+require('dotenv').config({ path: '.env.local' });
+const { MongoClient } = require("mongodb");
+const bcrypt = require("bcryptjs");
 
+const uri = process.env.MONGODB_URI;
 async function seed() {
   const client = new MongoClient(uri);
 
