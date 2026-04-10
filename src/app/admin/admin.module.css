@@ -1,0 +1,453 @@
+.page {
+  min-height: 100vh;
+  background-color: #171823;
+  color: #c8cbe7;
+  font-family: inherit;
+}
+
+.loadingScreen {
+  min-height: 100vh;
+  background-color: #171823;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #5b5e7e;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #393a4c;
+  border-top-color: #3a7bfd;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.errorText {
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+.backLink {
+  color: #3a7bfd;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #25273d;
+  border-bottom: 1px solid #393a4c;
+  padding: 0 32px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navLogo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.navLogo:hover {
+  opacity: 0.8;
+}
+
+.adminLabel {
+  font-size: 12px;
+  color: #5b5e7e;
+  padding-left: 16px;
+  border-left: 1px solid #393a4c;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navUser {
+  font-size: 13px;
+  color: #767992;
+}
+
+.navBtn {
+  font-size: 12px;
+  color: #767992;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #393a4c;
+  border-radius: 5px;
+  transition: color 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+
+.navBtn:hover {
+  color: #c8cbe7;
+  border-color: #767992;
+}
+
+.logoutBtn {
+  font-size: 12px;
+  background: none;
+  border: 1px solid #393a4c;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #767992;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  font-family: inherit;
+}
+
+.logoutBtn:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.08);
+}
+
+/* Main content */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 24px 60px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 800px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  background-color: #25273d;
+  border: 1px solid #393a4c;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.statCard:hover {
+  border-color: #3a7bfd;
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #767992;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statSub {
+  font-size: 11px;
+  color: #4d5067;
+  margin-top: 2px;
+}
+
+/* Progress bar */
+.progressSection {
+  background-color: #25273d;
+  border: 1px solid #393a4c;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #767992;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.progressBar {
+  height: 8px;
+  background-color: #393a4c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #57ddff, #c058f3);
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+/* Toast notification */
+.toast {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.toastSuccess {
+  background-color: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.35);
+  color: #2ecc71;
+}
+
+.toastError {
+  background-color: rgba(231, 76, 60, 0.12);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+  color: #e74c3c;
+}
+
+/* Section */
+.section {
+  background-color: #25273d;
+  border: 1px solid #393a4c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #c8cbe7;
+  padding: 18px 20px;
+  border-bottom: 1px solid #393a4c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+
+.sectionCount {
+  font-size: 11px;
+  font-weight: 400;
+  color: #5b5e7e;
+  background-color: #1e2035;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* Table */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table thead tr {
+  background-color: #1e2035;
+}
+
+.table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: #5b5e7e;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #393a4c;
+  transition: background-color 0.15s;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background-color: #2c2e44;
+}
+
+.table td {
+  padding: 14px 16px;
+  color: #c8cbe7;
+  vertical-align: middle;
+}
+
+.currentUserRow {
+  background-color: rgba(58, 123, 253, 0.05) !important;
+}
+
+/* Username cell */
+.usernameCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #57ddff, #c058f3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.youBadge {
+  font-size: 10px;
+  background-color: rgba(58, 123, 253, 0.2);
+  color: #3a7bfd;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.emailCell {
+  color: #767992 !important;
+  font-size: 12px !important;
+}
+
+/* Role badge */
+.roleBadge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.adminRole {
+  background: linear-gradient(135deg, rgba(243, 156, 18, 0.2), rgba(231, 76, 60, 0.2));
+  color: #f39c12;
+  border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
+.userRole {
+  background-color: rgba(58, 123, 253, 0.15);
+  color: #3a7bfd;
+  border: 1px solid rgba(58, 123, 253, 0.3);
+}
+
+/* Number cells */
+.numberCell {
+  text-align: center !important;
+  font-weight: 600;
+}
+
+.completedNum {
+  color: #2ecc71;
+}
+
+.activeNum {
+  color: #f39c12;
+}
+
+.dateCell {
+  color: #5b5e7e !important;
+  font-size: 12px !important;
+  white-space: nowrap;
+}
+
+/* Action buttons */
+.roleBtn {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.roleBtn:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+
+.promoteBtn {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+  border-color: rgba(243, 156, 18, 0.4);
+}
+
+.demoteBtn {
+  background-color: rgba(149, 165, 166, 0.1);
+  color: #95a5a6;
+  border-color: rgba(149, 165, 166, 0.4);
+}
+
+.noAction {
+  color: #393a4c;
+  font-size: 16px;
+}

@@ -1,0 +1,119 @@
+
+
+.container {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark {
+  background-color: #25273d;
+}
+
+.light {
+  background-color: #ffffff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.list {
+  /* just a wrapper for droppable */
+}
+
+.emptyState {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.dark .emptyState p {
+  color: #4d5067;
+}
+
+.light .emptyState p {
+  color: #9495a5;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  font-size: 12px;
+}
+
+.dark .footer {
+  background-color: #25273d;
+  color: #5b5e7e;
+}
+
+.light .footer {
+  background-color: #ffffff;
+  color: #9495a5;
+}
+
+.itemsLeft {
+  min-width: 80px;
+}
+
+/* Filter buttons */
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filterBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.15s ease;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.dark .filterBtn {
+  color: #5b5e7e;
+}
+
+.light .filterBtn {
+  color: #9495a5;
+}
+
+.filterBtn:hover {
+  color: #e3e4f1 !important;
+}
+
+.light .filterBtn:hover {
+  color: #494c6b !important;
+}
+
+.filterBtn.activeFilter {
+  color: #3a7bfd !important;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  transition: color 0.15s ease;
+  min-width: 80px;
+  text-align: right;
+}
+
+.dark .clearBtn {
+  color: #5b5e7e;
+}
+
+.light .clearBtn {
+  color: #9495a5;
+}
+
+.clearBtn:hover {
+  color: #e3e4f1;
+}
+
+.light .clearBtn:hover {
+  color: #494c6b;
+}

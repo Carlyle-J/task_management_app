@@ -1,0 +1,219 @@
+
+
+.page {
+  min-height: 100vh;
+  background-color: #171823;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #1e1f35 0%, #6b4ebd 50%, #c058f3 100%);
+  background-image: url('/images/bg-desktop-dark.jpg');
+  background-size: cover;
+  background-position: center top;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background-color: #25273d;
+  border-radius: 12px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.appTitle {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 12px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.formTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c8cbe7;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #5b5e7e;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #767992;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.input {
+  background-color: #1e2035;
+  border: 1px solid #393a4c;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #c8cbe7;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: #4d5067;
+}
+
+.input:focus {
+  border-color: #3a7bfd;
+  box-shadow: 0 0 0 3px rgba(58, 123, 253, 0.15);
+}
+
+.inputError {
+  border-color: #e74c3c !important;
+}
+
+.fieldError {
+  font-size: 11px;
+  color: #e74c3c;
+  margin-top: -2px;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper .input {
+  padding-right: 60px;
+}
+
+.showPasswordBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #767992;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  padding: 4px;
+  transition: color 0.15s;
+  font-family: inherit;
+}
+
+.showPasswordBtn:hover {
+  color: #c8cbe7;
+}
+
+/* Password strength */
+.strengthWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.strengthBar {
+  flex: 1;
+  height: 4px;
+  background-color: #393a4c;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.strengthFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strengthLabel {
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 40px;
+}
+
+.errorBox {
+  background-color: rgba(231, 76, 60, 0.12);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #e74c3c;
+}
+
+.signupBtn {
+  background: linear-gradient(135deg, #57ddff, #c058f3);
+  border: none;
+  border-radius: 6px;
+  padding: 13px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  font-family: inherit;
+}
+
+.signupBtn:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.signupBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.switchText {
+  text-align: center;
+  font-size: 13px;
+  color: #5b5e7e;
+  margin-top: 22px;
+}
+
+.link {
+  color: #3a7bfd;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: #57ddff;
+}
