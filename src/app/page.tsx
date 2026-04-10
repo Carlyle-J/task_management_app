@@ -108,7 +108,7 @@ export default function Home() {
           {authUser ? (
             <>
               <span className={styles.welcomeText}>
-                👋 Welcome, <strong>{authUser.username}</strong>
+                 Welcome, <strong>{authUser.username}</strong>
                 {authUser.role === "admin" && (
                   <span className={styles.adminBadge}>ADMIN</span>
                 )}
@@ -126,7 +126,7 @@ export default function Home() {
             </>
           ) : (
             <>
-              <span className={styles.guestText}>You are browsing as a guest</span>
+              <span className={styles.guestText}>Please first signup and login to use</span>
               <Link href="/login" className={styles.loginSignupBtn}>
                 Log in / Sign up
               </Link>
